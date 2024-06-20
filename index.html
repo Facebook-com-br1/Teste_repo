@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Elite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/png">
+    <!-- Adicionando Font Awesome para usar ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #6f42c1;
+            padding: 20px;
+            position: relative;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            width: 80px;
+        }
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1001; /* Ajuste para ficar sobre o menu */
+        }
+        .instagram-icon {
+            font-size: 2em; /* Tamanho do ícone do Instagram */
+            color: #E1306C;
+            position: absolute;
+            top: calc(100% + 20px); /* Ajuste aqui para posicionar o ícone abaixo do título */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000; /* Ajuste para garantir que fique sobre o fundo roxo */
+        }
+        .menu-icon {
+            font-size: 2em;
+            color: #fff;
+            cursor: pointer;
+            position: absolute;
+            top: 20px; /* Ajuste aqui para posicionar o ícone do menu hambúrguer */
+            right: 20px;
+            z-index: 1000; /* Ajuste para garantir que fique sobre o fundo roxo */
+        }
+        .menu {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 60px; /* Ajuste aqui para posicionar o menu abaixo do cabeçalho */
+            right: 20px;
+            z-index: 1001; /* Ajuste para ficar sobre o cabeçalho roxo */
+            text-align: left;
+        }
+        .menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .menu a:hover {
+            background-color: #f0f0f0;
+        }
+        .menu a i {
+            margin-right: 10px;
+        }
+        .close-icon {
+            font-size: 1.5em;
+            color: #888;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+        main {
+            margin: 50px 20px;
+        }
+        .info {
+            background-color: #6f42c1;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .info h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .info p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .download-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: #6f42c1;
+            background-color: #fff;
+            border: 2px solid #6f42c1;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .download-button:hover {
+            background-color: #6f42c1;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="icon.png" alt="Ícone do Social Elite">
+        <h1>Social Elite</h1>
+        <i class="fab fa-instagram instagram-icon"></i> <!-- Ícone do Instagram -->
+        <i class="fas fa-bars menu-icon" id="openMenu"></i> <!-- Ícone do menu hambúrguer -->
+    </header>
+    <div class="menu" id="menu">
+        <i class="fas fa-times close-icon" id="closeMenu"></i>
+        <a href="https://t.me/vipdns49" target="_blank"><i class="fab fa-telegram-plane"></i> Suporte</a>
+        <a href="https://t.me/consultasvip4" target="_blank"><i class="fas fa-search"></i> Grupo de Consultas</a>
+    </div>
+    <main>
+        <section class="info">
+            <h2>Melhor Painel Smm do mercado brasileiro !!</h2>
+            <p>⭐ Temos os Melhores Serviços do Mundo ⭐</p>
+            <p>✅ Suporte Dedicado Todos os Dias da Semana</p>
+            <p>✅ Serviços Exclusivos</p>
+            <p>✅ Envios Imediatos</p>
+            <p>✅ Revenda os nossos serviços e lucre muito mais!</p>
+            <p><strong>Teste nosso app e ganhe 1000 seguidores gratuitamente</strong></p>
+            <a href="social_elite.apk" class="download-button" download="social_elite.apk">
+                <i class="fas fa-download"></i> Download APK
+            </a>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.getElementById('openMenu');
+            const menu = document.getElementById('menu');
+            const closeMenu = document.getElementById('closeMenu');
+
+            menuIcon.addEventListener('click', function() {
+                menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            });
+
+            closeMenu.addEventListener('click', function() {
+                menu.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
